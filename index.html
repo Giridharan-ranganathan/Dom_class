@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <script>
+        var div = document.createElement("div");
+        div.className = "col";
+
+        var firstName = document.createElement("label");
+        firstName.innerHTML = "FirstName";
+        var br1 = document.createElement("br");
+        var firstNameIn = document.createElement("input");
+        
+
+        var middleName = document.createElement("label");
+        middleName.innerHTML = "middleName";
+        // var br2 = document.createElement("br");
+        var middleNameIn = document.createElement("input");
+
+        var lastName = document.createElement("label");
+        lastName.innerHTML = "lastName";
+        // var br3 = document.createElement("br");
+        var lastNameIn = document.createElement("input");
+
+        var email = document.createElement("label");
+        email.innerHTML = "email";
+        // var br4 = document.createElement("br");
+        var emailIn = document.createElement("input");
+
+        firstName.append(br1,firstNameIn);
+        middleName.append(middleNameIn);
+        lastName.append(lastNameIn);
+        email.append(emailIn);
+
+
+        div.append(firstName,middleName,lastName,email);
+        document.body.append(div);
+        console.log(div);
+      
+    </script>
+</body>
+</html>
