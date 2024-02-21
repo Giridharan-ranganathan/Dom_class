@@ -8,39 +8,83 @@
 </head>
 <body>
     <script>
-        var div = document.createElement("div");
-        div.className = "col";
 
-        var firstName = document.createElement("label");
-        firstName.innerHTML = "FirstName";
-        var br1 = document.createElement("br");
-        var firstNameIn = document.createElement("input");
-        
+    
+function label_create(tagname,attrname,attvalue,content){
+    var labelElement = document.createElement(tagname);
+    labelElement.setAttribute(attrname,attvalue);
+    labelElement.innerHTML = content
+    return labelElement;
+}
 
-        var middleName = document.createElement("label");
-        middleName.innerHTML = "middleName";
-        // var br2 = document.createElement("br");
-        var middleNameIn = document.createElement("input");
+function break_create(){
+    var ele = document.createElement("br");
+    return ele;
+}
 
-        var lastName = document.createElement("label");
-        lastName.innerHTML = "lastName";
-        // var br3 = document.createElement("br");
-        var lastNameIn = document.createElement("input");
+function input_create(tagname,attr1name,attr1value,attr2name,attr2value){
+    var element = document.createElement(tagname);
+    element.setAttribute(attr1name,attr1value);
+    element.setAttribute(attr2name,attr2value);
+    return element;
+}
 
-        var email = document.createElement("label");
-        email.innerHTML = "email";
-        // var br4 = document.createElement("br");
-        var emailIn = document.createElement("input");
+// function button_create(tagname,att,attval,content){
+//     var buttonCrt = document.createElement(tagname);
+//     buttonCrt.setAttribute(attr,attval);
+//     buttonCrt.innerHTML = content;
+//     return buttonCrt;
+// }
 
-        firstName.append(br1,firstNameIn);
-        middleName.append(middleNameIn);
-        lastName.append(lastNameIn);
-        email.append(emailIn);
+var firstname = label_create("label","for","firstname","FirstName");
+var br1 = break_create();
+var firstnameInpute = input_create("input","type","firstname","id","firstname");
+var br11 = break_create();
 
+var middlename =label_create("label","for","middlename","middlename");
+var br2 = break_create();
+var middlenameInput = input_create("input","type","middlename","id","middlename");
+var br12 = break_create();
 
-        div.append(firstName,middleName,lastName,email);
-        document.body.append(div);
-        console.log(div);
+var lastname =label_create("label","for","lastname","lastname");
+var br3 = break_create();
+var lastnameInput = input_create("input","type","lastname","id","lastname");
+var br13 = break_create();
+
+var email =label_create("label","for","email","Email");
+var br4 = break_create();
+var emailInput = input_create("input","type","email","id","email");
+var br14 = break_create();
+
+var password =label_create("label","for","password","password");
+var br5 = break_create();
+var passwordInput = input_create("input","type","password","id","password");
+var br15 = break_create();
+
+function fof(){
+      let firstname = document.getElementById("firstname").value;
+      console.log(firstname);
+
+      let middlename = document.getElementById("middlename").value;
+      console.log(middlename);
+      
+
+      let lastname = document.getElementById("lastname").value;
+      console.log(lastname);
+
+      let email = document.getElementById("email").value;
+      console.log(email);
+
+      let password = document.getElementById("password").value;
+      console.log(password);
+}
+
+var btn = document.createElement("button");
+btn.setAttribute("type","button");
+btn.setAttribute("onclick","fof()");
+btn.innerHTML="click Me";
+
+document.body.append(firstname,br1,firstnameInpute,br11,middlename,br2,middlenameInput,br12,lastname,br3,lastnameInput,br13,email,br4,emailInput,br14,password,br5,passwordInput,br15,btn);
       
     </script>
 </body>
