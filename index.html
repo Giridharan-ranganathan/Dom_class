@@ -63,20 +63,38 @@ var br15 = break_create();
 
 function fof(){
       let firstname = document.getElementById("firstname").value;
-      console.log(firstname);
+      var span1 = document.createElement("span");
+      span1.innerHTML = `The first name is "${firstname}"`;
+      var br6 = break_create();
+    //   console.log(firstname);
 
       let middlename = document.getElementById("middlename").value;
-      console.log(middlename);
+      var span2 = document.createElement("span");
+      span2.innerHTML = `The middle name is "${middlename}"`;
+      var br7 = break_create();
+    //   console.log(middlename);
       
 
       let lastname = document.getElementById("lastname").value;
-      console.log(lastname);
+      var span3 = document.createElement("span");
+      span3.innerHTML = `The last name is "${lastname}"`;
+      var br8 = break_create();
+    //   console.log(lastname);
 
       let email = document.getElementById("email").value;
-      console.log(email);
+      var span4 = document.createElement("span");
+      span4.innerHTML = `The Email name is "${email}"`;
+      var br9 = break_create();
+    //   console.log(email);
 
       let password = document.getElementById("password").value;
-      console.log(password);
+      var span5 = document.createElement("span");
+      span5.innerHTML = `The PassWord name is "${password}"`;
+      var br10 = break_create();
+    //   console.log(password);
+    var br7 = break_create();
+
+      document.body.append(br6,span1,br7,span2,br8,span3,br9,span4,br10,span5);
 }
 
 var btn = document.createElement("button");
